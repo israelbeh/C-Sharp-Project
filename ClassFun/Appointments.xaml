@@ -1,0 +1,84 @@
+﻿<Window x:Class="ClassFun.Appointments"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Appointment" Height="479.5" Width="1185.25" Loaded="Appointment_Loaded" Icon="Images/NDFCICON.jpg">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="2,-16,-1,0" Background="LightBlue">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.005"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+
+        <Label Content="Counselor" HorizontalAlignment="Left" Margin="72,166,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Label Content="Client" HorizontalAlignment="Left" Margin="245,114,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" RenderTransformOrigin="0.47,-1.826" Width="46" BorderThickness="0"/>
+        <Label Content="Duration" HorizontalAlignment="Left" Margin="72,114,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Label Content="Date" HorizontalAlignment="Left" Margin="72,59,0,0" VerticalAlignment="Top" Width="51" FontWeight="Bold"/>
+        <Label Content="Notes" HorizontalAlignment="Left" Margin="72,300,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Label Content="Scheduled By" HorizontalAlignment="Left" Margin="72,219,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" BorderThickness="5">
+
+        </Label>
+        <DatePicker x:Name="ApptDate" HorizontalAlignment="Left" Margin="72,90,0,0" VerticalAlignment="Top" Width="120" BorderThickness="5"/>
+        <ComboBox x:Name="TimeCB" HorizontalAlignment="Left" Margin="245,92,0,0" VerticalAlignment="Top" Width="120" BorderThickness="5">
+            <ComboBoxItem Content="8:00:00 AM"/>
+            <ComboBoxItem Content="8:30:00 AM"/>
+            <ComboBoxItem Content="9:00:00 AM"/>
+            <ComboBoxItem Content="9:30:00 AM"/>
+            <ComboBoxItem Content="10:00:00 AM"/>
+            <ComboBoxItem Content="10:30:00 AM"/>
+            <ComboBoxItem Content="11:00:00 AM"/>
+            <ComboBoxItem Content="11:30:00 AM"/>
+            <ComboBoxItem Content="1:00:00 PM"/>
+            <ComboBoxItem Content="1:30:00 PM"/>
+            <ComboBoxItem Content="2:00:00 PM"/>
+            <ComboBoxItem Content="2:30:00 PM"/>
+            <ComboBoxItem Content="3:00:00 PM"/>
+            <ComboBoxItem Content="3:30:00 PM"/>
+            <ComboBoxItem Content="4:00:00 PM"/>
+            <ComboBoxItem Content="4:30:00 PM"/>
+        </ComboBox>
+        
+        <ComboBox x:Name="DurationCB" HorizontalAlignment="Left" Margin="72,144,0,0" VerticalAlignment="Top" Width="120" BorderThickness="5">
+            <ComboBoxItem Content="30"/>
+            <ComboBoxItem Content="60"/>
+            <ComboBoxItem Content="90"/>
+            <ComboBoxItem Content="120"/>
+        </ComboBox>
+        <ComboBox x:Name="ClientCB" HorizontalAlignment="Left" Margin="245,145,0,0" VerticalAlignment="Top" Width="120" BorderThickness="5"/>
+        <Label x:Name="ApptLabel" Content="Appointments" HorizontalAlignment="Left" Margin="645,13,0,0" VerticalAlignment="Top" FontSize="36" Width="370" FontWeight="Bold"/>
+
+
+        <ComboBox x:Name="CounselorCB" HorizontalAlignment="Left" Margin="72,197,0,0" VerticalAlignment="Top" Width="120" BorderThickness="5"/>
+        <ComboBox x:Name="RoomCB" HorizontalAlignment="Left" Margin="245,192,0,0" VerticalAlignment="Top" Width="120" BorderThickness="5"/>
+        <ComboBox x:Name="ScheduledByCB" HorizontalAlignment="Left" Margin="72,250,0,0" VerticalAlignment="Top" Width="120" BorderThickness="5"/>
+
+        <TextBox x:Name="NotesTxt" MaxLength="3000" HorizontalAlignment="Left" Height="68" Margin="127,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" BorderThickness="5"/>
+        <Button x:Name="ApptAddBtn" Content="ADD " HorizontalAlignment="Left" Margin="94,395,0,0" VerticalAlignment="Top" Width="83" Height="38" Click="ApptAddBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="ApptUpdateBtn" Content="Update" HorizontalAlignment="Left" Margin="262,395,0,0" VerticalAlignment="Top" Width="88" Height="38" Click="ApptUpdateBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <DataGrid x:Name="ApptDataGrid" IsReadOnly="True" HorizontalAlignment="Left" Margin="431,76,0,0" VerticalAlignment="Top" Height="196" Width="706" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="ClientFirstBtn" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="467,306,0,0" VerticalAlignment="Top" Width="105" ToolTip="Select First Appointment" Click="ClientFirstBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="ClientPreviousBtn" Content="&lt;" HorizontalAlignment="Left" Margin="645,306,0,0" VerticalAlignment="Top" Width="103" ToolTip="Select Previous Appointment" Click="ClientPreviousBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="ClientNextBtn" Content="&gt;" HorizontalAlignment="Left" Margin="815,306,0,0" VerticalAlignment="Top" Width="105" ToolTip="Select Next Appointment" Click="ClientNextBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="ClientLastBtn" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="998,306,0,0" VerticalAlignment="Top" Width="105" ToolTip="Select Last Appointment" Click="ClientLastBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="ApptEditBtn" Content="Edit Appointment" HorizontalAlignment="Left" Margin="532,374,0,0" VerticalAlignment="Top" Width="127" Height="36" ToolTip="Click to Edit Selected Appointment" Click="ApptEditBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="ApptDeleteBtn" Content="Delete Appointment" HorizontalAlignment="Left" Margin="877,374,0,0" VerticalAlignment="Top" Width="144" Height="36" ToolTip="Click To Delete Selected Appointment" Click="ApptDeleteBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+
+
+        <Separator HorizontalAlignment="Left" Height="103" Margin="152,198,0,0" VerticalAlignment="Top" Width="490" RenderTransformOrigin="0.5,0.5">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.959"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Button x:Name="ApptCloseBtn" Content="Close" HorizontalAlignment="Left" Margin="1074,412,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click_1" Height="38" BorderThickness="5" FontWeight="Bold" ToolTip="Click to Close window and return to home screen"/>
+        <Label Content="Room" HorizontalAlignment="Left" Margin="245,167,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Label Content="Time" HorizontalAlignment="Left" Margin="245,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.037,-0.235" FontWeight="Bold" BorderThickness="5"/>
+        <Label Content="Add/Edit Appointment" HorizontalAlignment="Left" Margin="94,19,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+    </Grid>
+</Window>

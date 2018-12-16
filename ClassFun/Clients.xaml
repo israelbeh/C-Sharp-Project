@@ -1,0 +1,140 @@
+﻿<Window x:Class="ClassFun.Clients"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Client" Height="468.5" Width="1001" Icon="Images/NDFCICON.jpg">
+    <Grid Margin="0,-14,0,-1" HorizontalAlignment="Left" Width="986" RenderTransformOrigin="0.5,0.5" Background="LightBlue" Loaded="Clients_Loaded">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.242"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+
+        <TextBox x:Name="ClientFNameTxt" MaxLength="50" HorizontalAlignment="Left" Height="23" Margin="64,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" BorderThickness="5"/>
+        <TextBox x:Name="ClientLNameTxt" MaxLength="50" HorizontalAlignment="Left" Height="23" Margin="182,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" BorderThickness="5"/>
+        <ComboBox x:Name="ClientReminderCB" HorizontalAlignment="Left" Margin="308,101,0,0" VerticalAlignment="Top" Width="62" BorderThickness="5">
+            <ComboBoxItem Content="Text"/>
+            <ComboBoxItem Content="Email"/>
+            <ComboBoxItem Content="Phone"/>
+            <ComboBoxItem Content="Postcard"/>
+        </ComboBox>
+        <Label Content="Current Clients" HorizontalAlignment="Left" Margin="637,26,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
+
+
+        <TextBox x:Name="ClientAddressTxt" MaxLength="50" HorizontalAlignment="Left" Height="23" Margin="64,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" BorderThickness="5"/>
+        <TextBox x:Name="ClientCityTxt" MaxLength="50" HorizontalAlignment="Left" Height="23" Margin="308,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" BorderThickness="5"/>
+        <ComboBox x:Name="cbState" HorizontalAlignment="Left" Margin="64,211,0,0" VerticalAlignment="Top" Width="46" SelectedIndex="-1" BorderThickness="5">
+            <ComboBoxItem Content="AL" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem/>
+            <ComboBoxItem Content="AK" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="AZ" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="AR" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="CA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="CO" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="CT" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="DE" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="DC" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="FL" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="GA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="HI" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="ID" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="IL" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="IN" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="IA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="KS" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="KY" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="LA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="ME" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MD" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MI" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MN" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MS" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MO" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MT" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NE" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NV" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NH" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NJ" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NM" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NY" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NC" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="ND" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="OH" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="OK" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="OR" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="PA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="RI" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="SC" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="SD" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="TN" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="TX" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="UT" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="VT" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="VA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="WA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="WV" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="WI" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="WY" HorizontalAlignment="Left" Width="130"/>
+        </ComboBox>
+        <TextBox x:Name="ClientZipTxt" MaxLength="10" HorizontalAlignment="Left" Height="22" Margin="139,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" BorderThickness="5" ToolTip="Enter 5 digit Zip Code"/>
+        <TextBox x:Name="ClientPhoneTxt" MaxLength="14" HorizontalAlignment="Left" Height="23" Margin="265,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" ToolTip="Enter phone number (800-888-8888)" BorderThickness="5"/>
+
+        <TextBox x:Name="ClientEmailTxt" MaxLength="100" HorizontalAlignment="Left" Height="24" Margin="64,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="309" BorderThickness="5"/>
+        <ComboBox x:Name="ReferredByCB" HorizontalAlignment="Left" Margin="64,329,0,0" VerticalAlignment="Top" Width="120" BorderThickness="5">
+            
+
+        </ComboBox>
+        <ComboBox x:Name="FoundOutCB" HorizontalAlignment="Left" Margin="250,329,0,0" VerticalAlignment="Top" Width="120" BorderThickness="5">
+            
+            <ComboBoxItem Content="Radio"/>
+            <ComboBoxItem Content="Billboard"/>
+            <ComboBoxItem Content="Family"/>
+            <ComboBoxItem Content="Employee"/>
+        </ComboBox>
+        <Label Content="Found Out" HorizontalAlignment="Left" Margin="250,303,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+
+        <Button x:Name="ClientAddBtn" Content="Add" HorizontalAlignment="Left" Margin="95,382,0,0" VerticalAlignment="Top" Width="74" Height="36" ToolTip="Click to add a new client to Current Clients" RenderTransformOrigin="0.817,1.583" Click="ClientAddBtn_Click" FontWeight="Bold" BorderThickness="5"/>
+        <Button x:Name="ClientUpdateBtn" Content="Update" HorizontalAlignment="Left" Margin="265,382,0,0" VerticalAlignment="Top" Width="75" Height="36" ToolTip="Click update to save changes " Click="ClientUpdateBtn_Click" FontWeight="Bold" BorderThickness="5"/>
+        <DataGrid x:Name="ClientDataGrid" HorizontalAlignment="Left" IsReadOnly="True" Margin="481,74,0,0" VerticalAlignment="Top" Height="190" Width="471" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="ClientFirstBtn" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="512,283,0,0" VerticalAlignment="Top" Width="75" ToolTip="Select First Record" Click="ClientFirstBtn_Click" BorderThickness="5,5,5,3" FontWeight="Bold"/>
+        <Button x:Name="ClientPreviousBtn" Content="&lt;" HorizontalAlignment="Left" Margin="627,283,0,0" VerticalAlignment="Top" Width="76" ToolTip="Select Previous Record" Click="ClientPreviousBtn_Click" BorderThickness="5,5,5,3" FontWeight="Bold"/>
+        <Button x:Name="ClientNextBtn" Content="&gt;" HorizontalAlignment="Left" Margin="735,283,0,0" VerticalAlignment="Top" Width="76" ToolTip="Select Next Record" Click="ClientNextBtn_Click" BorderThickness="5,5,5,3" FontWeight="Bold"/>
+        <Button x:Name="ClientLastBtn" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="847,283,0,0" VerticalAlignment="Top" Width="76" ToolTip="Select Last Record" Click="ClientLastBtn_Click" BorderThickness="5,5,5,3" FontWeight="Bold"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="64,70,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="64,129,0,0" VerticalAlignment="Top" Height="23" RenderTransformOrigin="0.524,0.87" FontWeight="Bold" BorderThickness="0"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="265,185,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="-0.26,0.938" BorderThickness="5"/>
+        <Label Content="ZIP Code" HorizontalAlignment="Left" Margin="139,185,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Label Content="Email Address" HorizontalAlignment="Left" Margin="64,238,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Label Content="State" HorizontalAlignment="Left" Margin="61,185,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="0"/>
+        <Label Content="Reminder" HorizontalAlignment="Left" Margin="308,70,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="182,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.302,0.519" FontWeight="Bold" BorderThickness="5"/>
+
+
+        <Label Content="Add/Update Client" HorizontalAlignment="Left" Margin="86,26,0,0" VerticalAlignment="Top" Width="264" FontSize="22" FontWeight="Bold"/>
+
+        <Separator HorizontalAlignment="Left" Height="100" Margin="230,178,0,0" VerticalAlignment="Top" Width="424" RenderTransformOrigin="0.5,0.5">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.001"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Button x:Name="ClientEditBtn" Content="Edit Client" HorizontalAlignment="Left" Margin="562,345,0,0" VerticalAlignment="Top" Width="98" ToolTip="Click to Edit Selected Client" Click="ClientEditBtn_Click" BorderThickness="5,5,5,3" FontWeight="Bold"/>
+
+
+
+        <Label Content="Referred By" HorizontalAlignment="Left" Margin="64,298,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Button x:Name="ClientDeleteBtn" Content="Delete Client" HorizontalAlignment="Left" Margin="785,345,0,0" VerticalAlignment="Top" Width="104" ToolTip="Click to Delete Selected Client" Click="ClientDeleteBtn_Click" BorderThickness="5,5,5,3" FontWeight="Bold"/>
+
+        <Label Content="City" HorizontalAlignment="Left" Margin="308,128,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="905,410,0,0" VerticalAlignment="Top" Width="71" Click="Button_Click_1" Height="28" BorderThickness="5,5,5,3" FontWeight="Bold" ToolTip="Click to Close window and return to home screen"/>
+
+
+    </Grid>
+</Window>

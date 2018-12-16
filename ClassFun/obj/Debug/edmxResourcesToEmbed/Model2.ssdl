@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="jeffersonModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="jeffersonModel1StoreContainer">
+    <EntitySet Name="Appointment" EntityType="jeffersonModel1.Store.Appointment" store:Type="Tables" Schema="ijbeh" />
+    <EntitySet Name="Client" EntityType="jeffersonModel1.Store.Client" store:Type="Tables" Schema="ijbeh" />
+    <EntitySet Name="Counselor" EntityType="jeffersonModel1.Store.Counselor" store:Type="Tables" Schema="ijbeh" />
+    <EntitySet Name="Employee" EntityType="jeffersonModel1.Store.Employee" store:Type="Tables" Schema="ijbeh" />
+    <EntitySet Name="Person" EntityType="jeffersonModel1.Store.Person" store:Type="Tables" Schema="ijbeh" />
+    <EntitySet Name="Room" EntityType="jeffersonModel1.Store.Room" store:Type="Tables" Schema="ijbeh" />
+    <EntitySet Name="ScheduledFor" EntityType="jeffersonModel1.Store.ScheduledFor" store:Type="Tables" Schema="ijbeh" />
+    <EntitySet Name="contain" EntityType="jeffersonModel1.Store.contain" store:Type="Tables" Schema="lego" />
+    <EntitySet Name="part" EntityType="jeffersonModel1.Store.part" store:Type="Tables" Schema="lego" />
+    <EntitySet Name="Clients" EntityType="jeffersonModel1.Store.Clients" store:Type="Views" store:Schema="ijbeh" store:Name="Clients">
+      <DefiningQuery>SELECT 
+      [Clients].[ClientID] AS [ClientID], 
+      [Clients].[FirstName] AS [FirstName], 
+      [Clients].[LastName] AS [LastName], 
+      [Clients].[Address] AS [Address], 
+      [Clients].[City] AS [City], 
+      [Clients].[State] AS [State], 
+      [Clients].[ZIP] AS [ZIP], 
+      [Clients].[Phone] AS [Phone], 
+      [Clients].[Email] AS [Email], 
+      [Clients].[FoundOut] AS [FoundOut], 
+      [Clients].[ReminderMethod] AS [ReminderMethod], 
+      [Clients].[ReferredBy] AS [ReferredBy]
+      FROM [ijbeh].[Clients] AS [Clients]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Counselors" EntityType="jeffersonModel1.Store.Counselors" store:Type="Views" store:Schema="ijbeh" store:Name="Counselors">
+      <DefiningQuery>SELECT 
+      [Counselors].[CounselorID] AS [CounselorID], 
+      [Counselors].[FirstName] AS [FirstName], 
+      [Counselors].[LastName] AS [LastName], 
+      [Counselors].[Address] AS [Address], 
+      [Counselors].[City] AS [City], 
+      [Counselors].[State] AS [State], 
+      [Counselors].[ZIP] AS [ZIP], 
+      [Counselors].[Phone] AS [Phone], 
+      [Counselors].[Email] AS [Email], 
+      [Counselors].[DegreeSuffix] AS [DegreeSuffix]
+      FROM [ijbeh].[Counselors] AS [Counselors]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Employees" EntityType="jeffersonModel1.Store.Employees" store:Type="Views" store:Schema="ijbeh" store:Name="Employees">
+      <DefiningQuery>SELECT 
+      [Employees].[EmployeeID] AS [EmployeeID], 
+      [Employees].[FirstName] AS [FirstName], 
+      [Employees].[LastName] AS [LastName], 
+      [Employees].[Address] AS [Address], 
+      [Employees].[City] AS [City], 
+      [Employees].[State] AS [State], 
+      [Employees].[ZIP] AS [ZIP], 
+      [Employees].[Phone] AS [Phone], 
+      [Employees].[Email] AS [Email], 
+      [Employees].[DateHired] AS [DateHired], 
+      [Employees].[Wage] AS [Wage], 
+      [Employees].[Supervisor] AS [Supervisor]
+      FROM [ijbeh].[Employees] AS [Employees]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Appointme__Couns__2CBBEFBE" Association="jeffersonModel1.Store.FK__Appointme__Couns__2CBBEFBE">
+      <End Role="Counselor" EntitySet="Counselor" />
+      <End Role="Appointment" EntitySet="Appointment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Appointme__Emplo__2DB013F7" Association="jeffersonModel1.Store.FK__Appointme__Emplo__2DB013F7">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Appointment" EntitySet="Appointment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Appointme__RoomN__2EA43830" Association="jeffersonModel1.Store.FK__Appointme__RoomN__2EA43830">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="Appointment" EntitySet="Appointment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Client__ClientID__1F61F4A0" Association="jeffersonModel1.Store.FK__Client__ClientID__1F61F4A0">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Client" EntitySet="Client" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Client__Referred__205618D9" Association="jeffersonModel1.Store.FK__Client__Referred__205618D9">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="Client1" EntitySet="Client" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Counselor__Couns__27031668" Association="jeffersonModel1.Store.FK__Counselor__Couns__27031668">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Counselor" EntitySet="Counselor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__Employ__23328584" Association="jeffersonModel1.Store.FK__Employee__Employ__23328584">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__Superv__2426A9BD" Association="jeffersonModel1.Store.FK__Employee__Superv__2426A9BD">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee1" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Scheduled__Appoi__3180A4DB" Association="jeffersonModel1.Store.FK__Scheduled__Appoi__3180A4DB">
+      <End Role="Appointment" EntitySet="Appointment" />
+      <End Role="ScheduledFor" EntitySet="ScheduledFor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Scheduled__Clien__3274C914" Association="jeffersonModel1.Store.FK__Scheduled__Clien__3274C914">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="ScheduledFor" EntitySet="ScheduledFor" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+    </Key>
+    <Property Name="AppointmentID" Type="int" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="Duration" Type="int" />
+    <Property Name="CounselorID" Type="int" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="RoomNumber" Type="int" Nullable="false" />
+    <Property Name="Notes" Type="varchar" MaxLength="3000" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="FoundOut" Type="varchar" MaxLength="50" />
+    <Property Name="ReminderMethod" Type="varchar" MaxLength="50" />
+    <Property Name="ReferredByClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="Counselor">
+    <Key>
+      <PropertyRef Name="CounselorID" />
+    </Key>
+    <Property Name="CounselorID" Type="int" Nullable="false" />
+    <Property Name="DegreeSuffix" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="DateHired" Type="datetime" />
+    <Property Name="Wage" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="SupervisorID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="personID" />
+    </Key>
+    <Property Name="personID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="char" MaxLength="2" />
+    <Property Name="ZIP" Type="char" MaxLength="10" />
+    <Property Name="Phone" Type="varchar" MaxLength="14" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="RoomNumber" />
+    </Key>
+    <Property Name="RoomNumber" Type="int" Nullable="false" />
+    <Property Name="RoomName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ScheduledFor">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="AppointmentID" Type="int" Nullable="false" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="Assignment" Type="varchar" MaxLength="2000" />
+    <Property Name="kept" Type="bit" />
+  </EntityType>
+  <EntityType Name="contain">
+    <Key>
+      <PropertyRef Name="ParentID" />
+      <PropertyRef Name="childID" />
+    </Key>
+    <Property Name="ParentID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="childID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Qty" Type="int" />
+  </EntityType>
+  <EntityType Name="part">
+    <Key>
+      <PropertyRef Name="PartID" />
+    </Key>
+    <Property Name="PartID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Kind" Type="char" MaxLength="1" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" />
+    <Property Name="Image" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'jefferson.ijbeh.Clients' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="char" MaxLength="2" />
+    <Property Name="ZIP" Type="char" MaxLength="10" />
+    <Property Name="Phone" Type="varchar" MaxLength="14" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="FoundOut" Type="varchar" MaxLength="50" />
+    <Property Name="ReminderMethod" Type="varchar" MaxLength="50" />
+    <Property Name="ReferredBy" Type="varchar" MaxLength="101" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'jefferson.ijbeh.Counselors' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Counselors">
+    <Key>
+      <PropertyRef Name="CounselorID" />
+    </Key>
+    <Property Name="CounselorID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="char" MaxLength="2" />
+    <Property Name="ZIP" Type="char" MaxLength="10" />
+    <Property Name="Phone" Type="varchar" MaxLength="14" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="DegreeSuffix" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'jefferson.ijbeh.Employees' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="char" MaxLength="2" />
+    <Property Name="ZIP" Type="char" MaxLength="10" />
+    <Property Name="Phone" Type="varchar" MaxLength="14" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="DateHired" Type="datetime" />
+    <Property Name="Wage" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="Supervisor" Type="varchar" MaxLength="101" />
+  </EntityType>
+  <Association Name="FK__Appointme__Couns__2CBBEFBE">
+    <End Role="Counselor" Type="jeffersonModel1.Store.Counselor" Multiplicity="1" />
+    <End Role="Appointment" Type="jeffersonModel1.Store.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Counselor">
+        <PropertyRef Name="CounselorID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="CounselorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Appointme__Emplo__2DB013F7">
+    <End Role="Employee" Type="jeffersonModel1.Store.Employee" Multiplicity="1" />
+    <End Role="Appointment" Type="jeffersonModel1.Store.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Appointme__RoomN__2EA43830">
+    <End Role="Room" Type="jeffersonModel1.Store.Room" Multiplicity="1" />
+    <End Role="Appointment" Type="jeffersonModel1.Store.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomNumber" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="RoomNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Client__ClientID__1F61F4A0">
+    <End Role="Person" Type="jeffersonModel1.Store.Person" Multiplicity="1" />
+    <End Role="Client" Type="jeffersonModel1.Store.Client" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="personID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Client__Referred__205618D9">
+    <End Role="Client" Type="jeffersonModel1.Store.Client" Multiplicity="0..1" />
+    <End Role="Client1" Type="jeffersonModel1.Store.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="Client1">
+        <PropertyRef Name="ReferredByClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Counselor__Couns__27031668">
+    <End Role="Person" Type="jeffersonModel1.Store.Person" Multiplicity="1" />
+    <End Role="Counselor" Type="jeffersonModel1.Store.Counselor" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="personID" />
+      </Principal>
+      <Dependent Role="Counselor">
+        <PropertyRef Name="CounselorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__Employ__23328584">
+    <End Role="Person" Type="jeffersonModel1.Store.Person" Multiplicity="1" />
+    <End Role="Employee" Type="jeffersonModel1.Store.Employee" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="personID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__Superv__2426A9BD">
+    <End Role="Employee" Type="jeffersonModel1.Store.Employee" Multiplicity="1" />
+    <End Role="Employee1" Type="jeffersonModel1.Store.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Employee1">
+        <PropertyRef Name="SupervisorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Scheduled__Appoi__3180A4DB">
+    <End Role="Appointment" Type="jeffersonModel1.Store.Appointment" Multiplicity="1" />
+    <End Role="ScheduledFor" Type="jeffersonModel1.Store.ScheduledFor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Appointment">
+        <PropertyRef Name="AppointmentID" />
+      </Principal>
+      <Dependent Role="ScheduledFor">
+        <PropertyRef Name="AppointmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Scheduled__Clien__3274C914">
+    <End Role="Client" Type="jeffersonModel1.Store.Client" Multiplicity="1" />
+    <End Role="ScheduledFor" Type="jeffersonModel1.Store.ScheduledFor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="ScheduledFor">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

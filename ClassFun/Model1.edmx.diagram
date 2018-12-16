@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c91539dccee34baabab98b4b64a598bb" Name="Diagram1">
+        <EntityTypeShape EntityType="jeffersonModel.Appointment" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.Client" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.Counselor" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.Employee" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.Person" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.Room" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.ScheduledFor" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.contain" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.part" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.Appointment1" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.Client1" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.Counselor1" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.Employee1" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="jeffersonModel.Room1" Width="1.5" PointX="5.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="jeffersonModel.FK__Appointme__Couns__250787D5" ManuallyRouted="false" />
+        <AssociationConnector Association="jeffersonModel.FK__Appointme__Emplo__25FBAC0E" ManuallyRouted="false" />
+        <AssociationConnector Association="jeffersonModel.FK__Appointme__RoomN__26EFD047" ManuallyRouted="false" />
+        <AssociationConnector Association="jeffersonModel.FK__Scheduled__Appoi__29CC3CF2" ManuallyRouted="false" />
+        <AssociationConnector Association="jeffersonModel.FK__Client__ClientID__17AD8CB7" ManuallyRouted="false" />
+        <AssociationConnector Association="jeffersonModel.FK__Client__Referred__18A1B0F0" ManuallyRouted="false" />
+        <AssociationConnector Association="jeffersonModel.FK__Scheduled__Clien__2AC0612B" ManuallyRouted="false" />
+        <AssociationConnector Association="jeffersonModel.FK__Counselor__Couns__1F4EAE7F" ManuallyRouted="false" />
+        <AssociationConnector Association="jeffersonModel.FK__Employee__Employ__1B7E1D9B" ManuallyRouted="false" />
+        <AssociationConnector Association="jeffersonModel.FK__Employee__Superv__1C7241D4" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

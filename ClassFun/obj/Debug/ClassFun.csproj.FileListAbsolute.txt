@@ -1,0 +1,46 @@
+c:\users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\bin\Debug\ClassFun.exe.config
+c:\users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\bin\Debug\ClassFun.exe
+c:\users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\bin\Debug\ClassFun.pdb
+c:\users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\MainWindow.baml
+c:\users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\MainWindow.g.cs
+c:\users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\App.g.cs
+c:\users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\ClassFun_MarkupCompile.cache
+c:\users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\ClassFun.g.resources
+c:\users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\ClassFun.Properties.Resources.resources
+c:\users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\ClassFun.csproj.GenerateResource.Cache
+c:\users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\ClassFun.exe
+c:\users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\ClassFun.pdb
+C:\Users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\bin\Debug\EntityFramework.dll
+C:\Users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\bin\Debug\EntityFramework.xml
+C:\Users\israelbeh\Documents\Visual Studio 2012\Projects\ClassFun\ClassFun\obj\Debug\Appointments.baml
+C:\Users\israelbeh\Documents\Visual Studio 2012\Projects\ClassFun\ClassFun\obj\Debug\Clients.baml
+C:\Users\israelbeh\Documents\Visual Studio 2012\Projects\ClassFun\ClassFun\obj\Debug\Employees.baml
+C:\Users\israelbeh\Documents\Visual Studio 2012\Projects\ClassFun\ClassFun\obj\Debug\Appointments.g.cs
+C:\Users\israelbeh\Documents\Visual Studio 2012\Projects\ClassFun\ClassFun\obj\Debug\Clients.g.cs
+C:\Users\israelbeh\Documents\Visual Studio 2012\Projects\ClassFun\ClassFun\obj\Debug\Employees.g.cs
+C:\Users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\Counselors.baml
+C:\Users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\Rooms.baml
+C:\Users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\Counselors.g.cs
+C:\Users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\Rooms.g.cs
+C:\Users\israelbeh\documents\visual studio 2012\Projects\ClassFun\ClassFun\obj\Debug\ClassFun.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\bin\Debug\ClassFun.exe.config
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\ClassFun.exe
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\ClassFun.pdb
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\ClassFun.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\Appointments.baml
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\Clients.baml
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\Counselors.baml
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\Employees.baml
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\MainWindow.baml
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\Rooms.baml
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\Appointments.g.cs
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\Clients.g.cs
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\Counselors.g.cs
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\Employees.g.cs
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\MainWindow.g.cs
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\Rooms.g.cs
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\App.g.cs
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\ClassFun_MarkupCompile.cache
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\ClassFun.g.resources
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\ClassFun.Properties.Resources.resources
+\\Mac\Home\Desktop\OneDrive\Documentos\IS 403\ClassFun\ClassFun\obj\Debug\ClassFun.csproj.GenerateResource.Cache

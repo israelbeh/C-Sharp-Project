@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="jeffersonModelStoreContainer" CdmEntityContainer="jeffersonEntities">
+    <EntitySetMapping Name="Appointments">
+      <EntityTypeMapping TypeName="jeffersonModel.Appointment">
+        <MappingFragment StoreEntitySet="Appointment">
+          <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="CounselorID" ColumnName="CounselorID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="RoomNumber" ColumnName="RoomNumber" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="jeffersonModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="FoundOut" ColumnName="FoundOut" />
+          <ScalarProperty Name="ReminderMethod" ColumnName="ReminderMethod" />
+          <ScalarProperty Name="ReferredByClientID" ColumnName="ReferredByClientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Counselors">
+      <EntityTypeMapping TypeName="jeffersonModel.Counselor">
+        <MappingFragment StoreEntitySet="Counselor">
+          <ScalarProperty Name="CounselorID" ColumnName="CounselorID" />
+          <ScalarProperty Name="DegreeSuffix" ColumnName="DegreeSuffix" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="jeffersonModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="DateHired" ColumnName="DateHired" />
+          <ScalarProperty Name="Wage" ColumnName="Wage" />
+          <ScalarProperty Name="SupervisorID" ColumnName="SupervisorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="jeffersonModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="personID" ColumnName="personID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="jeffersonModel.Room">
+        <MappingFragment StoreEntitySet="Room">
+          <ScalarProperty Name="RoomNumber" ColumnName="RoomNumber" />
+          <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScheduledFors">
+      <EntityTypeMapping TypeName="jeffersonModel.ScheduledFor">
+        <MappingFragment StoreEntitySet="ScheduledFor">
+          <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Assignment" ColumnName="Assignment" />
+          <ScalarProperty Name="kept" ColumnName="kept" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contains">
+      <EntityTypeMapping TypeName="jeffersonModel.contain">
+        <MappingFragment StoreEntitySet="contain">
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="childID" ColumnName="childID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="parts">
+      <EntityTypeMapping TypeName="jeffersonModel.part">
+        <MappingFragment StoreEntitySet="part">
+          <ScalarProperty Name="PartID" ColumnName="PartID" />
+          <ScalarProperty Name="Kind" ColumnName="Kind" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Appointments1">
+      <EntityTypeMapping TypeName="jeffersonModel.Appointment1">
+        <MappingFragment StoreEntitySet="Appointments">
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="Counselor" ColumnName="Counselor" />
+          <ScalarProperty Name="ScheduledBy" ColumnName="ScheduledBy" />
+          <ScalarProperty Name="roomNumber" ColumnName="roomNumber" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients1">
+      <EntityTypeMapping TypeName="jeffersonModel.Client1">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FoundOut" ColumnName="FoundOut" />
+          <ScalarProperty Name="ReminderMethod" ColumnName="ReminderMethod" />
+          <ScalarProperty Name="ReferredBy" ColumnName="ReferredBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Counselor1">
+      <EntityTypeMapping TypeName="jeffersonModel.Counselor1">
+        <MappingFragment StoreEntitySet="Counselor1">
+          <ScalarProperty Name="CounselorID" ColumnName="CounselorID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DegreeSuffix" ColumnName="DegreeSuffix" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees1">
+      <EntityTypeMapping TypeName="jeffersonModel.Employee1">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DateHired" ColumnName="DateHired" />
+          <ScalarProperty Name="Wage" ColumnName="Wage" />
+          <ScalarProperty Name="Supervisor" ColumnName="Supervisor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

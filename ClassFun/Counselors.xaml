@@ -1,0 +1,127 @@
+﻿<Window x:Class="ClassFun.Counselors"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Counselors" Height="415.1" Width="1012.8" Loaded="Counselors_Loaded" Icon="Images/NDFCICON.jpg">
+    <Grid Margin="0,-14,0,-5" HorizontalAlignment="Left" Width="999" RenderTransformOrigin="0.5,0.5" Background="LightBlue">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.242"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+
+
+        <TextBox x:Name="CounselorFNameTxt" MaxLength="50" HorizontalAlignment="Left" Height="23" Margin="64,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71" BorderThickness="5"/>
+        <TextBox x:Name="CounselorLNameTxt" MaxHeight="50" HorizontalAlignment="Left" Height="23" Margin="187,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.5,0.5" BorderThickness="5"/>
+        <ComboBox x:Name="DegreeCB" HorizontalAlignment="Left" Margin="299,105,0,0" VerticalAlignment="Top" Width="71" BorderThickness="5">
+            <ComboBoxItem/>
+            <ComboBoxItem Content="MS"/>
+            <ComboBoxItem Content="PhD"/>
+            <ComboBoxItem Content="EdD"/>
+        </ComboBox>
+        <TextBox x:Name="CounselorAddressTxt" MaxLength="50" HorizontalAlignment="Left" Height="23" Margin="64,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" BorderThickness="5"/>
+        <TextBox x:Name="CounselorCityTxt" MaxLength="50" HorizontalAlignment="Left" Height="23" Margin="275,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" ToolTip="Enter phone number (800-888-8888)" BorderThickness="5"/>
+        <ComboBox x:Name="cbState" HorizontalAlignment="Left" Margin="64,211,0,0" VerticalAlignment="Top" Width="55" SelectedIndex="-1" BorderThickness="5">
+            <ComboBoxItem Content="AL" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="AK" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="AZ" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="AR" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="CA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="CO" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="CT" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="DE" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="DC" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="FL" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="GA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="HI" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="ID" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="IL" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="IN" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="IA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="KS" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="KY" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="LA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="ME" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MD" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MI" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MN" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MS" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MO" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="MT" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NE" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NV" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NH" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NJ" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NM" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NY" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="NC" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="ND" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="OH" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="OK" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="OR" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="PA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="RI" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="SC" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="SD" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="TN" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="TX" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="UT" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="VT" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="VA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="WA" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="WV" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="WI" HorizontalAlignment="Left" Width="130"/>
+            <ComboBoxItem Content="WY" HorizontalAlignment="Left" Width="130"/>
+        </ComboBox>
+        <TextBox x:Name="CounselorZipTxt" MaxLength="10" HorizontalAlignment="Left" Height="22" Margin="153,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" BorderThickness="5" ToolTip="Enter 5 digit Zip Code"/>
+        <TextBox x:Name="CounselorPhoneTxt" MaxLength="14" HorizontalAlignment="Left" Height="23" Margin="275,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" ToolTip="Enter phone number (800-888-8888)" BorderThickness="5" RenderTransformOrigin="0.956,0.503"/>
+        <TextBox x:Name="CounselorEmailTxt" MaxLength="100" HorizontalAlignment="Left" Height="24" Margin="64,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="339" BorderThickness="5"/>
+        <Button x:Name="CounselorAddBtn" Content="Add" HorizontalAlignment="Left" Margin="85,320,0,0" VerticalAlignment="Top" Width="78" Height="32" ToolTip="Click to add a new counselor to Current Counselors" Click="CounselorAddBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="CounselorUpdateBtn" Content="Update" HorizontalAlignment="Left" Margin="275,320,0,0" VerticalAlignment="Top" Width="75" Height="32" ToolTip="Click update to save changes " Click="CounselorUpdateBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <DataGrid x:Name="CounselorDataGrid" IsReadOnly="True" HorizontalAlignment="Left" Margin="476,74,0,0" VerticalAlignment="Top" Height="176" Width="489"  BorderThickness="5" FontWeight="Bold"/>
+        <Label Content="Current Counselors"  HorizontalAlignment="Left" Margin="614,21,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
+        <Button x:Name="CounselorFirstBtn" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="512,273,0,0" VerticalAlignment="Top" Width="75" ToolTip="Select First Record" Click="CounselorFirstBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="CounselorPreviousBtn" Content="&lt;" HorizontalAlignment="Left" Margin="624,273,0,0" VerticalAlignment="Top" Width="76" ToolTip="Select Previous Record" Click="CounselorPreviousBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="CounselorNextBtn" Content="&gt;" HorizontalAlignment="Left" Margin="734,273,0,0" VerticalAlignment="Top" Width="76" ToolTip="Select Next Record" Click="CounselorNextBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="CounselorLastBtn" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="847,273,0,0" VerticalAlignment="Top" Width="76" ToolTip="Select Last Record" Click="CounselorLastBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="64,70,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="64,129,0,0" VerticalAlignment="Top" Height="23" RenderTransformOrigin="0.524,0.87" FontWeight="Bold" BorderThickness="0"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="275,185,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="0"/>
+        <Label Content="ZIP Code" HorizontalAlignment="Left" Margin="153,185,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="0"/>
+        <Label Content="Email Address" HorizontalAlignment="Left" Margin="64,238,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Label Content="State" HorizontalAlignment="Left" Margin="61,185,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="186,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.302,0.519" FontWeight="Bold" BorderThickness="5"/>
+
+
+
+        <Label Content="Add/Update Counselor" HorizontalAlignment="Left" Margin="86,26,0,0" VerticalAlignment="Top" Width="264" FontSize="22" FontWeight="Bold" BorderThickness="5"/>
+
+        <Separator HorizontalAlignment="Left" Height="64" Margin="231,169,0,0" VerticalAlignment="Top" Width="412" RenderTransformOrigin="0.5,0.5" BorderThickness="0">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.001"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+
+
+
+        <Label Content="Degree" HorizontalAlignment="Left" Margin="299,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.302,0.519" FontWeight="Bold" BorderThickness="5"/>
+
+        <Button x:Name="CounselorDeleteBtn" Content="Delete Counselor" HorizontalAlignment="Left" Margin="768,324,0,0" VerticalAlignment="Top" Width="124" ToolTip="Click to Delete Selected Counselor" Click="CounselorDeleteBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Button x:Name="CounselorEditBtn" Content="Edit Counselor" HorizontalAlignment="Left" Margin="545,324,0,0" VerticalAlignment="Top" Width="124" ToolTip="Click to Edit Selected Counselor" Click="CounselorEditBtn_Click" BorderThickness="5" FontWeight="Bold"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="557,308,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+
+        <Label Content="City" HorizontalAlignment="Left" Margin="275,126,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="5"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="902,360,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click_1" Height="29" ToolTip="Click to Close window and return to home screen" BorderThickness="5" FontWeight="Bold"/>
+
+
+
+    </Grid>
+</Window>

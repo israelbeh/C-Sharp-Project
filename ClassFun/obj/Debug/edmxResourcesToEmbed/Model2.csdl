@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="jeffersonModel1" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="jeffersonEntities1" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Appointments" EntityType="jeffersonModel1.Appointment" />
+    <EntitySet Name="Clients" EntityType="jeffersonModel1.Client" />
+    <EntitySet Name="Counselors" EntityType="jeffersonModel1.Counselor" />
+    <EntitySet Name="Employees" EntityType="jeffersonModel1.Employee" />
+    <EntitySet Name="People" EntityType="jeffersonModel1.Person" />
+    <EntitySet Name="Rooms" EntityType="jeffersonModel1.Room" />
+    <EntitySet Name="ScheduledFors" EntityType="jeffersonModel1.ScheduledFor" />
+    <EntitySet Name="contains" EntityType="jeffersonModel1.contain" />
+    <EntitySet Name="parts" EntityType="jeffersonModel1.part" />
+    <EntitySet Name="Clients1" EntityType="jeffersonModel1.Client1" />
+    <EntitySet Name="Counselors1" EntityType="jeffersonModel1.Counselor1" />
+    <EntitySet Name="Employees1" EntityType="jeffersonModel1.Employee1" />
+    <AssociationSet Name="FK__Appointme__Couns__2CBBEFBE" Association="jeffersonModel1.FK__Appointme__Couns__2CBBEFBE">
+      <End Role="Counselor" EntitySet="Counselors" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Appointme__Emplo__2DB013F7" Association="jeffersonModel1.FK__Appointme__Emplo__2DB013F7">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Appointme__RoomN__2EA43830" Association="jeffersonModel1.FK__Appointme__RoomN__2EA43830">
+      <End Role="Room" EntitySet="Rooms" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Scheduled__Appoi__3180A4DB" Association="jeffersonModel1.FK__Scheduled__Appoi__3180A4DB">
+      <End Role="Appointment" EntitySet="Appointments" />
+      <End Role="ScheduledFor" EntitySet="ScheduledFors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Client__ClientID__1F61F4A0" Association="jeffersonModel1.FK__Client__ClientID__1F61F4A0">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Client__Referred__205618D9" Association="jeffersonModel1.FK__Client__Referred__205618D9">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="Client1" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Scheduled__Clien__3274C914" Association="jeffersonModel1.FK__Scheduled__Clien__3274C914">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="ScheduledFor" EntitySet="ScheduledFors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Counselor__Couns__27031668" Association="jeffersonModel1.FK__Counselor__Couns__27031668">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Counselor" EntitySet="Counselors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__Employ__23328584" Association="jeffersonModel1.FK__Employee__Employ__23328584">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__Superv__2426A9BD" Association="jeffersonModel1.FK__Employee__Superv__2426A9BD">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee1" EntitySet="Employees" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+    </Key>
+    <Property Name="AppointmentID" Type="Int32" Nullable="false" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="Duration" Type="Int32" />
+    <Property Name="CounselorID" Type="Int32" Nullable="false" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="RoomNumber" Type="Int32" Nullable="false" />
+    <Property Name="Notes" Type="String" MaxLength="3000" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Counselor" Relationship="jeffersonModel1.FK__Appointme__Couns__2CBBEFBE" FromRole="Appointment" ToRole="Counselor" />
+    <NavigationProperty Name="Employee" Relationship="jeffersonModel1.FK__Appointme__Emplo__2DB013F7" FromRole="Appointment" ToRole="Employee" />
+    <NavigationProperty Name="Room" Relationship="jeffersonModel1.FK__Appointme__RoomN__2EA43830" FromRole="Appointment" ToRole="Room" />
+    <NavigationProperty Name="ScheduledFors" Relationship="jeffersonModel1.FK__Scheduled__Appoi__3180A4DB" FromRole="Appointment" ToRole="ScheduledFor" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="Int32" Nullable="false" />
+    <Property Name="FoundOut" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReminderMethod" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReferredByClientID" Type="Int32" />
+    <NavigationProperty Name="Person" Relationship="jeffersonModel1.FK__Client__ClientID__1F61F4A0" FromRole="Client" ToRole="Person" />
+    <NavigationProperty Name="Client1" Relationship="jeffersonModel1.FK__Client__Referred__205618D9" FromRole="Client" ToRole="Client1" />
+    <NavigationProperty Name="Client2" Relationship="jeffersonModel1.FK__Client__Referred__205618D9" FromRole="Client1" ToRole="Client" />
+    <NavigationProperty Name="ScheduledFors" Relationship="jeffersonModel1.FK__Scheduled__Clien__3274C914" FromRole="Client" ToRole="ScheduledFor" />
+  </EntityType>
+  <EntityType Name="Counselor">
+    <Key>
+      <PropertyRef Name="CounselorID" />
+    </Key>
+    <Property Name="CounselorID" Type="Int32" Nullable="false" />
+    <Property Name="DegreeSuffix" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Appointments" Relationship="jeffersonModel1.FK__Appointme__Couns__2CBBEFBE" FromRole="Counselor" ToRole="Appointment" />
+    <NavigationProperty Name="Person" Relationship="jeffersonModel1.FK__Counselor__Couns__27031668" FromRole="Counselor" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="DateHired" Type="DateTime" Precision="3" />
+    <Property Name="Wage" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="SupervisorID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Appointments" Relationship="jeffersonModel1.FK__Appointme__Emplo__2DB013F7" FromRole="Employee" ToRole="Appointment" />
+    <NavigationProperty Name="Person" Relationship="jeffersonModel1.FK__Employee__Employ__23328584" FromRole="Employee" ToRole="Person" />
+    <NavigationProperty Name="Employee1" Relationship="jeffersonModel1.FK__Employee__Superv__2426A9BD" FromRole="Employee" ToRole="Employee1" />
+    <NavigationProperty Name="Employee2" Relationship="jeffersonModel1.FK__Employee__Superv__2426A9BD" FromRole="Employee1" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="personID" />
+    </Key>
+    <Property Name="personID" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="ZIP" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Phone" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Client" Relationship="jeffersonModel1.FK__Client__ClientID__1F61F4A0" FromRole="Person" ToRole="Client" />
+    <NavigationProperty Name="Counselor" Relationship="jeffersonModel1.FK__Counselor__Couns__27031668" FromRole="Person" ToRole="Counselor" />
+    <NavigationProperty Name="Employee" Relationship="jeffersonModel1.FK__Employee__Employ__23328584" FromRole="Person" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="RoomNumber" />
+    </Key>
+    <Property Name="RoomNumber" Type="Int32" Nullable="false" />
+    <Property Name="RoomName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Appointments" Relationship="jeffersonModel1.FK__Appointme__RoomN__2EA43830" FromRole="Room" ToRole="Appointment" />
+  </EntityType>
+  <EntityType Name="ScheduledFor">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="AppointmentID" Type="Int32" Nullable="false" />
+    <Property Name="ClientID" Type="Int32" Nullable="false" />
+    <Property Name="Assignment" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="kept" Type="Boolean" />
+    <NavigationProperty Name="Appointment" Relationship="jeffersonModel1.FK__Scheduled__Appoi__3180A4DB" FromRole="ScheduledFor" ToRole="Appointment" />
+    <NavigationProperty Name="Client" Relationship="jeffersonModel1.FK__Scheduled__Clien__3274C914" FromRole="ScheduledFor" ToRole="Client" />
+  </EntityType>
+  <EntityType Name="contain">
+    <Key>
+      <PropertyRef Name="ParentID" />
+      <PropertyRef Name="childID" />
+    </Key>
+    <Property Name="ParentID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="childID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Qty" Type="Int32" />
+  </EntityType>
+  <EntityType Name="part">
+    <Key>
+      <PropertyRef Name="PartID" />
+    </Key>
+    <Property Name="PartID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Kind" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="Description" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="Image" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Client1">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="ZIP" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Phone" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FoundOut" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReminderMethod" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ReferredBy" Type="String" MaxLength="101" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Counselor1">
+    <Key>
+      <PropertyRef Name="CounselorID" />
+    </Key>
+    <Property Name="CounselorID" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="ZIP" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Phone" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DegreeSuffix" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Employee1">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="ZIP" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="Phone" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DateHired" Type="DateTime" Precision="3" />
+    <Property Name="Wage" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="Supervisor" Type="String" MaxLength="101" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__Appointme__Couns__2CBBEFBE">
+    <End Role="Counselor" Type="jeffersonModel1.Counselor" Multiplicity="1" />
+    <End Role="Appointment" Type="jeffersonModel1.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Counselor">
+        <PropertyRef Name="CounselorID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="CounselorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Appointme__Emplo__2DB013F7">
+    <End Role="Employee" Type="jeffersonModel1.Employee" Multiplicity="1" />
+    <End Role="Appointment" Type="jeffersonModel1.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Appointme__RoomN__2EA43830">
+    <End Role="Room" Type="jeffersonModel1.Room" Multiplicity="1" />
+    <End Role="Appointment" Type="jeffersonModel1.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomNumber" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="RoomNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Scheduled__Appoi__3180A4DB">
+    <End Role="Appointment" Type="jeffersonModel1.Appointment" Multiplicity="1" />
+    <End Role="ScheduledFor" Type="jeffersonModel1.ScheduledFor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Appointment">
+        <PropertyRef Name="AppointmentID" />
+      </Principal>
+      <Dependent Role="ScheduledFor">
+        <PropertyRef Name="AppointmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Client__ClientID__1F61F4A0">
+    <End Role="Person" Type="jeffersonModel1.Person" Multiplicity="1" />
+    <End Role="Client" Type="jeffersonModel1.Client" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="personID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Client__Referred__205618D9">
+    <End Role="Client" Type="jeffersonModel1.Client" Multiplicity="0..1" />
+    <End Role="Client1" Type="jeffersonModel1.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="Client1">
+        <PropertyRef Name="ReferredByClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Scheduled__Clien__3274C914">
+    <End Role="Client" Type="jeffersonModel1.Client" Multiplicity="1" />
+    <End Role="ScheduledFor" Type="jeffersonModel1.ScheduledFor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="ScheduledFor">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Counselor__Couns__27031668">
+    <End Role="Person" Type="jeffersonModel1.Person" Multiplicity="1" />
+    <End Role="Counselor" Type="jeffersonModel1.Counselor" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="personID" />
+      </Principal>
+      <Dependent Role="Counselor">
+        <PropertyRef Name="CounselorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__Employ__23328584">
+    <End Role="Person" Type="jeffersonModel1.Person" Multiplicity="1" />
+    <End Role="Employee" Type="jeffersonModel1.Employee" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="personID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__Superv__2426A9BD">
+    <End Role="Employee" Type="jeffersonModel1.Employee" Multiplicity="1" />
+    <End Role="Employee1" Type="jeffersonModel1.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Employee1">
+        <PropertyRef Name="SupervisorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
